@@ -1,0 +1,7 @@
+.neptune
+logs
+state/
+__pycache__/
+*.pyc
+archive/
+start.txt
