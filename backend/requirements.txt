@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+scikit-learn==1.4.2
+joblib
+pandas
+numpy
+scipy
+tqdm
+kafka-python
+hdfs
+matplotlib
+seaborn
