@@ -1,0 +1,378 @@
+[
+ {
+  "id": "tt0118688",
+  "file": "3.7_118688.jpg",
+  "score": 3.7,
+  "title": "Batman & Robin",
+  "year": 1997,
+  "genres": [
+   "Action",
+   "Sci-Fi"
+  ],
+  "runtime": 125,
+  "votes": 285598,
+  "positivity": 0.11,
+  "buzz": 2
+ },
+ {
+  "id": "tt0119303",
+  "file": "4.3_119303.jpg",
+  "score": 4.3,
+  "title": "Home Alone 3",
+  "year": 1997,
+  "genres": [
+   "Action",
+   "Comedy",
+   "Crime"
+  ],
+  "runtime": 102,
+  "votes": 139897,
+  "positivity": 0.2,
+  "buzz": 1
+ },
+ {
+  "id": "tt0327554",
+  "file": "3.3_327554.jpg",
+  "score": 3.3,
+  "title": "Catwoman",
+  "year": 2004,
+  "genres": [
+   "Action",
+   "Crime",
+   "Fantasy"
+  ],
+  "runtime": 104,
+  "votes": 133861,
+  "positivity": 0.08,
+  "buzz": 1
+ },
+ {
+  "id": "tt0312528",
+  "file": "3.8_312528.jpg",
+  "score": 3.8,
+  "title": "The Cat in the Hat",
+  "year": 2003,
+  "genres": [
+   "Adventure",
+   "Comedy",
+   "Family"
+  ],
+  "runtime": 82,
+  "votes": 96572,
+  "positivity": 0.12,
+  "buzz": 1
+ },
+ {
+  "id": "tt0112462",
+  "file": "5.4_112462.jpg",
+  "score": 5.4,
+  "title": "Batman Forever",
+  "year": 1995,
+  "genres": [
+   "Action",
+   "Adventure"
+  ],
+  "runtime": 121,
+  "votes": 285606,
+  "positivity": 0.37,
+  "buzz": 2
+ },
+ {
+  "id": "tt0287978",
+  "file": "5.3_287978.jpg",
+  "score": 5.3,
+  "title": "Daredevil",
+  "year": 2003,
+  "genres": [
+   "Action",
+   "Crime",
+   "Drama"
+  ],
+  "runtime": 103,
+  "votes": 242990,
+  "positivity": 0.35,
+  "buzz": 2
+ },
+ {
+  "id": "tt0120685",
+  "file": "5.3_120685.jpg",
+  "score": 5.3,
+  "title": "Godzilla",
+  "year": 1998,
+  "genres": [
+   "Action",
+   "Sci-Fi",
+   "Thriller"
+  ],
+  "runtime": 139,
+  "votes": 215229,
+  "positivity": 0.35,
+  "buzz": 2
+ },
+ {
+  "id": "tt0257106",
+  "file": "5.3_257106.jpg",
+  "score": 5.3,
+  "title": "Scary Movie 2",
+  "year": 2001,
+  "genres": [
+   "Comedy",
+   "Horror"
+  ],
+  "runtime": 83,
+  "votes": 201219,
+  "positivity": 0.35,
+  "buzz": 2
+ },
+ {
+  "id": "tt0319262",
+  "file": "6.4_319262.jpg",
+  "score": 6.4,
+  "title": "The Day After Tomorrow",
+  "year": 2004,
+  "genres": [
+   "Action",
+   "Adventure",
+   "Sci-Fi"
+  ],
+  "runtime": 124,
+  "votes": 518681,
+  "positivity": 0.52,
+  "buzz": 2
+ },
+ {
+  "id": "tt0181852",
+  "file": "6.4_181852.jpg",
+  "score": 6.4,
+  "title": "Terminator 3: Rise of the Machines",
+  "year": 2003,
+  "genres": [
+   "Action",
+   "Sci-Fi"
+  ],
+  "runtime": 109,
+  "votes": 441476,
+  "positivity": 0.52,
+  "buzz": 2
+ },
+ {
+  "id": "tt0120912",
+  "file": "6.1_120912.jpg",
+  "score": 6.1,
+  "title": "Men in Black II",
+  "year": 2002,
+  "genres": [
+   "Action",
+   "Adventure",
+   "Comedy"
+  ],
+  "runtime": 88,
+  "votes": 437363,
+  "positivity": 0.48,
+  "buzz": 2
+ },
+ {
+  "id": "tt0120755",
+  "file": "6.1_120755.jpg",
+  "score": 6.1,
+  "title": "Mission: Impossible II",
+  "year": 2000,
+  "genres": [
+   "Action",
+   "Adventure",
+   "Thriller"
+  ],
+  "runtime": 123,
+  "votes": 419264,
+  "positivity": 0.48,
+  "buzz": 2
+ },
+ {
+  "id": "tt0145487",
+  "file": "7.3_145487.jpg",
+  "score": 7.3,
+  "title": "Spider-Man",
+  "year": 2002,
+  "genres": [
+   "Action",
+   "Adventure",
+   "Sci-Fi"
+  ],
+  "runtime": 121,
+  "votes": 1000733,
+  "positivity": 0.66,
+  "buzz": 3
+ },
+ {
+  "id": "tt0120915",
+  "file": "6.5_120915.jpg",
+  "score": 6.5,
+  "title": "Star Wars: Episode I - The Phantom Menace",
+  "year": 1999,
+  "genres": [
+   "Action",
+   "Adventure",
+   "Fantasy"
+  ],
+  "runtime": 136,
+  "votes": 940978,
+  "positivity": 0.54,
+  "buzz": 3
+ },
+ {
+  "id": "tt0121765",
+  "file": "6.7_121765.jpg",
+  "score": 6.7,
+  "title": "Star Wars: Episode II - Attack of the Clones",
+  "year": 2002,
+  "genres": [
+   "Action",
+   "Adventure",
+   "Fantasy"
+  ],
+  "runtime": 142,
+  "votes": 833329,
+  "positivity": 0.57,
+  "buzz": 3
+ },
+ {
+  "id": "tt0316654",
+  "file": "7.3_316654.jpg",
+  "score": 7.3,
+  "title": "Spider-Man 2",
+  "year": 2004,
+  "genres": [
+   "Action",
+   "Adventure",
+   "Sci-Fi"
+  ],
+  "runtime": 127,
+  "votes": 811419,
+  "positivity": 0.66,
+  "buzz": 3
+ },
+ {
+  "id": "tt0120338",
+  "file": "7.7_120338.jpg",
+  "score": 7.7,
+  "title": "Titanic",
+  "year": 1997,
+  "genres": [
+   "Drama",
+   "Romance"
+  ],
+  "runtime": 194,
+  "votes": 1416569,
+  "positivity": 0.72,
+  "buzz": 3
+ },
+ {
+  "id": "tt0120382",
+  "file": "8.1_120382.jpg",
+  "score": 8.1,
+  "title": "The Truman Show",
+  "year": 1998,
+  "genres": [
+   "Comedy",
+   "Drama"
+  ],
+  "runtime": 103,
+  "votes": 1412326,
+  "positivity": 0.78,
+  "buzz": 3
+ },
+ {
+  "id": "tt0325980",
+  "file": "8.0_325980.jpg",
+  "score": 8.0,
+  "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+  "year": 2003,
+  "genres": [
+   "Action",
+   "Adventure",
+   "Fantasy"
+  ],
+  "runtime": 143,
+  "votes": 1349198,
+  "positivity": 0.77,
+  "buzz": 3
+ },
+ {
+  "id": "tt0266697",
+  "file": "8.1_266697.jpg",
+  "score": 8.1,
+  "title": "Kill Bill: Vol. 1",
+  "year": 2003,
+  "genres": [
+   "Action",
+   "Crime",
+   "Thriller"
+  ],
+  "runtime": 111,
+  "votes": 1328458,
+  "positivity": 0.78,
+  "buzz": 3
+ },
+ {
+  "id": "tt0110912",
+  "file": "8.9_110912.jpg",
+  "score": 8.9,
+  "title": "Pulp Fiction",
+  "year": 1994,
+  "genres": [
+   "Crime",
+   "Drama"
+  ],
+  "runtime": 154,
+  "votes": 2475264,
+  "positivity": 0.91,
+  "buzz": 4
+ },
+ {
+  "id": "tt0133093",
+  "file": "8.7_133093.jpg",
+  "score": 8.7,
+  "title": "The Matrix",
+  "year": 1999,
+  "genres": [
+   "Action",
+   "Sci-Fi"
+  ],
+  "runtime": 136,
+  "votes": 2285901,
+  "positivity": 0.88,
+  "buzz": 4
+ },
+ {
+  "id": "tt0114369",
+  "file": "8.6_114369.jpg",
+  "score": 8.6,
+  "title": "Seven",
+  "year": 1995,
+  "genres": [
+   "Crime",
+   "Drama",
+   "Mystery"
+  ],
+  "runtime": 127,
+  "votes": 2067962,
+  "positivity": 0.86,
+  "buzz": 4
+ },
+ {
+  "id": "tt0167261",
+  "file": "8.7_167261.jpg",
+  "score": 8.7,
+  "title": "The Lord of the Rings: The Two Towers",
+  "year": 2002,
+  "genres": [
+   "Adventure",
+   "Drama",
+   "Fantasy"
+  ],
+  "runtime": 179,
+  "votes": 1990244,
+  "positivity": 0.88,
+  "buzz": 4
+ }
+]
