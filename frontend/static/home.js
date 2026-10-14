@@ -12,7 +12,7 @@ const Home = {
       <div class="marquee" aria-hidden="true">${marquee}</div><div class="shade"></div>
       <div class="hero-in">
         <div class="kicker">Big Data Analytics · Streaming NLP</div>
-        <h1>Know how the audience feels —<br><span class="grad">while the credits still roll.</span></h1>
+        <h1>Know how the audience feels <br><span class="grad">while the credits still roll.</span></h1>
         <p>Movie reviews stream through <b>Kafka</b>, land on <b>HDFS</b>, and are scored by a <b>TF-IDF + logistic regression</b> model.
            A running sentiment score per title replaces days of manual reporting.</p>
         <div class="cta"><a class="btn primary" href="#/library">Browse the library</a><a class="btn" href="#/dashboard">Open live dashboard</a></div>
