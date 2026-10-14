@@ -1,0 +1,106 @@
+# Streaming sentiment pipeline:
+#   producer -> Kafka -> processor (TF-IDF + LogReg) -> HDFS + running aggregates -> API -> dashboard
+x-backend: &backend
+  build:
+    context: ..
+    dockerfile: docker/Dockerfile.backend
+  volumes:
+    - ../model:/app/model
+    - ../data:/app/data
+    - state:/app/state
+  environment: &backend-env
+    KAFKA_BOOTSTRAP: kafka:9092
+    STORAGE: hdfs
+    WEBHDFS_URL: http://namenode:9870
+    NAMENODE_UI: http://localhost:9870
+  networks: [app-network]
+
+services:
+  # ---- Kafka (single-node KRaft, no ZooKeeper) --------------------------
+  kafka:
+    image: apache/kafka:3.7.0
+    hostname: kafka
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_NUM_PARTITIONS: 3
+    networks: [app-network]
+
+  # ---- Hadoop HDFS (1 NameNode + 1 DataNode) ----------------------------
+  namenode:
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    hostname: namenode
+    environment: &hadoop-env
+      CLUSTER_NAME: imdb
+      CORE_CONF_fs_defaultFS: hdfs://namenode:9000
+      HDFS_CONF_dfs_replication: 1
+      HDFS_CONF_dfs_webhdfs_enabled: "true"
+      HDFS_CONF_dfs_permissions_enabled: "false"
+      HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check: "false"
+    volumes: [namenode:/hadoop/dfs/name]
+    ports: ["9870:9870"]          # NameNode web UI
+    networks: [app-network]
+
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    hostname: datanode
+    environment:
+      <<: *hadoop-env
+      SERVICE_PRECONDITION: "namenode:9870"
+    volumes: [datanode:/hadoop/dfs/data]
+    depends_on: [namenode]
+    networks: [app-network]
+
+  # ---- one-shot: archive dataset + model to HDFS -------------------------
+  hdfs-ingest:
+    <<: *backend
+    command: ["python", "ingest_to_hdfs.py"]
+    restart: "no"
+    depends_on: [namenode, datanode]
+
+  # ---- streaming services -------------------------------------------------
+  producer:
+    <<: *backend
+    command: ["python", "-m", "streaming.producer"]
+    restart: unless-stopped
+    depends_on: [kafka]
+
+  processor:
+    <<: *backend
+    command: ["python", "-m", "streaming.processor"]
+    restart: unless-stopped
+    depends_on: [kafka, datanode]
+
+  api:
+    <<: *backend
+    ports: ["8000:8000"]
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.frontend
+    ports: ["8501:8501"]
+    volumes:
+      - ../archive/poster_downloads:/usr/share/nginx/html/posters:ro
+    depends_on: [api]
+    networks: [app-network]
+
+volumes:
+  state:
+  namenode:
+  datanode:
+
+networks:
+  app-network:
+    driver: bridge
