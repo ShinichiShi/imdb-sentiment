@@ -1,3 +1,12 @@
+/* light / dark theme (initial value is set by the inline script in index.html) */
+function applyTheme(t) {
+  document.documentElement.dataset.theme = t;
+  $("#themeBtn").textContent = t === "light" ? "🌙" : "☀️";
+  try { localStorage.setItem("theme", t); } catch (e) {}
+}
+$("#themeBtn").onclick = () => applyTheme(document.documentElement.dataset.theme === "light" ? "dark" : "light");
+$("#themeBtn").textContent = document.documentElement.dataset.theme === "light" ? "🌙" : "☀️";
+
 const ROUTES = { home: Home, library: Library, dashboard: Dashboard, analysis: Analysis, review: Review };
 let current = null, timer = null, token = 0;
 
